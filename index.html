@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart</title>
+    <title>Shopping Cart Project</title>
     <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- font awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -12,61 +14,136 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- ***************** -->
+
+    <!-- google fonts -->
+    <!-- **************** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- *************************** -->
   </head>
   <body>
-    <!-- Cart Modal Overlay-->
-    <div class="cart-modal-overlay">
-      <div class="close-btn">
-        <i class="fa-solid fa-square-xmark" id="close-btn"></i>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="logo">food delight</div>
+      <i class="fas fa-shopping-cart cart-icon" id="cart-btn"></i>
+    </nav>
+
+    <!-- ****** End of the navbar *** -->
+
+    <!-- Start of the shopping cart section -->
+
+    <div class="shopping-cart">
+      <div class="cart-item-top">
+        <h1 class="cart-item-title">cart items</h1>
+        <i class="fa fa-times" id="close-btn" aria-hidden="true"></i>
       </div>
-      <h1 class="cart-is-empty">Cart is empty</h1>
-      <div id="product-rows"></div>
-      <div class="total">
-        <h2 class="cart-total">Total</h2>
-        <span class="total-price">$0</span>
-        <button class="purchase-btn">purchase</button>
+
+      <div class="total-price-box">
+        <p class="total-price">
+          <strong>Total </strong>Rs. <span class="price">0</span>
+        </p>
       </div>
+      <button class="order-btn">Place Order</button>
     </div>
 
-    <!-- End of the cart modal overlay -->
+    <!-- END OF THE SHOPPING CART SECTION -->
+    <!-- ************************ -->
 
-    <div class="shopping">
-      <div class="cart-btn">
-        <i class="fa-solid fa-cart-shopping" id="cart"></i>
-        <span class="cart-quantity">0</span>
-      </div>
-    </div>
+    <!-- ***  Food Item Section *** -->
 
-    <div class="price-container">
-      <div class="item">
-        <button class="add-cart">Add to cart</button>
-        <span class="price">$1395</span>
-      </div>
-      <div class="item">
-        <div class="item">
-          <button class="add-cart">Add to cart</button>
-          <span class="price">$1175</span>
+    <section class="main">
+      <h1>Discover the Best Food</h1>
+
+      <div class="container">
+        <div class="food-item">
+          <div class="pic">
+            <img src="./img/img-1.jpg" alt="food image" />
+          </div>
+          <p class="food-type">Plain</p>
+          <div class="price-cart">
+            <p class="item-price">Rs. <span class="food-price">40</span></p>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <div class="food-item">
+          <div class="pic">
+            <img src="./img/img-2.jpg" alt="food image" />
+          </div>
+          <p class="food-type">Paper Roast</p>
+          <div class="price-cart">
+            <p class="item-price">Rs. <span class="food-price">65</span></p>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <div class="food-item">
+          <div class="pic">
+            <img src="./img/img-3.jpg" alt="food image" />
+          </div>
+          <p class="food-type">Onion Roast</p>
+          <div class="price-cart">
+            <p class="item-price">Rs. <span class="food-price">80</span></p>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <div class="food-item">
+          <div class="pic">
+            <img src="./img/img-4.jpg" alt="food image" />
+          </div>
+          <p class="food-type">Egg Parotta</p>
+          <div class="price-cart">
+            <p class="item-price">Rs. <span class="food-price">55</span></p>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <div class="food-item">
+          <div class="pic">
+            <img src="./img/img-5.jpg" alt="food image" />
+          </div>
+          <p class="food-type">Plain Omelette</p>
+          <div class="price-cart">
+            <p class="item-price">Rs. <span class="food-price">25</span></p>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <div class="food-item">
+          <div class="pic">
+            <img src="./img/img-6.jpg" alt="food image" />
+          </div>
+          <p class="food-type">Kadai Fry</p>
+          <div class="price-cart">
+            <p class="item-price">Rs. <span class="food-price">150</span></p>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <div class="food-item">
+          <div class="pic">
+            <img src="./img/img-7.jpg" alt="food image" />
+          </div>
+          <p class="food-type">Egg Veechu</p>
+          <div class="price-cart">
+            <p class="item-price">Rs. <span class="food-price">65</span></p>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <div class="food-item">
+          <div class="pic">
+            <img src="./img/img-8.jpg" alt="food image" />
+          </div>
+          <p class="food-type">Egg Roast</p>
+          <div class="price-cart">
+            <p class="item-price">
+              Rs. <span class="food-price">Egg Roast</span>
+            </p>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
         </div>
       </div>
-      <div class="item">
-        <div class="item">
-          <button class="add-cart">Add to cart</button>
-          <span class="price">$1150</span>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item">
-          <button class="add-cart">Add to cart</button>
-          <span class="price">$1575</span>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item">
-          <button class="add-cart">Add to cart</button>
-          <span class="price">$1230</span>
-        </div>
-      </div>
-    </div>
+    </section>
   </body>
   <script src="./js/script.js"></script>
 </html>
