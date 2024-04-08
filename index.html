@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Cart Modal Overlay-->
+    <div class="cart-modal-overlay">
+      <div class="close-btn">
+        <i class="fa-solid fa-square-xmark" id="close-btn"></i>
+      </div>
+      <h1 class="cart-is-empty">Cart is empty</h1>
+      <div id="product-rows"></div>
+      <div class="total">
+        <h2 class="cart-total">Total</h2>
+        <span class="total-price">$0</span>
+        <button class="purchase-btn">purchase</button>
+      </div>
+    </div>
+
+    <!-- End of the cart modal overlay -->
+
+    <div class="shopping">
+      <div class="cart-btn">
+        <i class="fa-solid fa-cart-shopping" id="cart"></i>
+        <span class="cart-quantity">0</span>
+      </div>
+    </div>
+
+    <div class="price-container">
+      <div class="item">
+        <button class="add-cart">Add to cart</button>
+        <span class="price">$1395</span>
+      </div>
+      <div class="item">
+        <div class="item">
+          <button class="add-cart">Add to cart</button>
+          <span class="price">$1175</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item">
+          <button class="add-cart">Add to cart</button>
+          <span class="price">$1150</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item">
+          <button class="add-cart">Add to cart</button>
+          <span class="price">$1575</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item">
+          <button class="add-cart">Add to cart</button>
+          <span class="price">$1230</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/script.js"></script>
+</html>

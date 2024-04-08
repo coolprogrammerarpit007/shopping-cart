@@ -1,0 +1,147 @@
+/* css boiler plate */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+/* *********** CSS BOILER PLATE ****** */
+
+/* Styling the cart modal */
+.cart-modal-overlay {
+  height: 100vh;
+  width: 50%;
+  background-color: rgb(50, 50, 50);
+  float: right;
+
+  /* Hiding cart, works on JavaScipt */
+  display: none;
+}
+
+.close-btn {
+  text-align: right;
+  margin: 0.5rem 1.5rem 0 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-is-empty {
+  color: #fff;
+  text-align: center;
+  /* display: none; */
+}
+#close-btn {
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+#product-rows {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  /* border: 1px solid greenyellow; */
+  padding: 2rem;
+  width: 95%;
+  margin: 10px auto;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cart-total,
+.total-price {
+  color: #fff;
+  font-size: 4rem;
+}
+
+.purchase-btn {
+  background-color: green;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  transition: all 0.7s;
+}
+
+.purchase-btn:hover {
+  background-color: #fff;
+  color: green;
+}
+
+/* End of styling of the cart project */
+
+.cart-btn {
+  text-align: right;
+  padding: 0.75rem 2rem;
+  position: relative;
+  /* background-color: gold; */
+  padding: 3rem;
+}
+
+#cart {
+  font-size: 3rem;
+  color: rgb(125, 50, 50);
+}
+
+.cart-quantity {
+  color: #fff;
+  background-color: rgb(188, 55, 119);
+  font-size: 2rem;
+  padding: 0.7rem;
+  border-radius: 5px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+/* Styling the shopping container */
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.add-cart {
+  background-color: green;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+
+.add-cart:hover {
+  background-color: #fff;
+  color: green;
+  border: 1px solid green;
+}
+
+.price {
+  font-size: 2rem;
+}
