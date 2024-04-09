@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart Project</title>
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="./css/style.css" />
 
-    <!-- font awesome -->
+    <!-- Font Awesome Link -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -14,136 +14,118 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- ***************** -->
 
-    <!-- google fonts -->
-    <!-- **************** -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
     <!-- *************************** -->
   </head>
   <body>
-    <!-- Navbar Section -->
-    <nav class="navbar">
-      <div class="logo">food delight</div>
-      <i class="fas fa-shopping-cart cart-icon" id="cart-btn"></i>
-    </nav>
+    <!-- Show Cart Button -->
+    <button class="show-cart">Show Cart</button>
+    <!-- Shopping Container -->
+    <div class="shopping-container">
+      <h1 class="title">Shopping Bag</h1>
 
-    <!-- ****** End of the navbar *** -->
+      <div class="items">
+        <!-- Product 1 -->
+        <div class="item">
+          <!-- Add Button -->
+          <div class="button">
+            <button class="add-btn">Add</button>
+          </div>
 
-    <!-- Start of the shopping cart section -->
+          <!-- Product Image -->
+          <div class="item-image">
+            <img src="./img/item-1.png" alt="" />
+          </div>
 
-    <div class="shopping-cart">
-      <div class="cart-item-top">
-        <h1 class="cart-item-title">cart items</h1>
-        <i class="fa fa-times" id="close-btn" aria-hidden="true"></i>
+          <!-- Item Description -->
+          <div class="item-description">
+            <span>Common Projects</span>
+            <span>Bball High</span>
+          </div>
+
+          <!-- Product Price -->
+          <div class="product-price">
+            <span class="price">$549</span>
+          </div>
+        </div>
+
+        <!-- ******************** -->
+
+        <!-- Product 2 -->
+        <div class="item">
+          <!-- Add Button -->
+          <div class="button">
+            <button class="add-btn">Add</button>
+          </div>
+
+          <!-- Product Image -->
+          <div class="item-image">
+            <img src="./img/item-2.png" alt="" />
+          </div>
+
+          <!-- Item Description -->
+          <div class="item-description">
+            <span>Maison Margiela</span>
+            <span>Future Sneakers</span>
+          </div>
+
+          <!-- Product Price -->
+          <div class="product-price">
+            <span class="price">$870</span>
+          </div>
+        </div>
+
+        <!-- ********************* -->
+
+        <!-- Product 3 -->
+        <div class="item">
+          <!-- Add Button -->
+          <div class="button">
+            <button class="add-btn">Add</button>
+          </div>
+
+          <!-- Product Image -->
+          <div class="item-image">
+            <img src="./img/item-3.png" alt="" />
+          </div>
+
+          <!-- Item Description -->
+          <div class="item-description">
+            <span>Our Legacy</span>
+            <span>Brushed Scarf</span>
+          </div>
+
+          <!-- Product Price -->
+          <div class="product-price">
+            <span class="price">$349</span>
+          </div>
+        </div>
       </div>
-
-      <div class="total-price-box">
-        <p class="total-price">
-          <strong>Total </strong>Rs. <span class="price">0</span>
-        </p>
-      </div>
-      <button class="order-btn">Place Order</button>
     </div>
 
-    <!-- END OF THE SHOPPING CART SECTION -->
-    <!-- ************************ -->
+    <!-- **** End of shoppinng container ** -->
 
-    <!-- ***  Food Item Section *** -->
+    <!-- Product-Cart -->
 
-    <section class="main">
-      <h1>Discover the Best Food</h1>
+    <div class="product-cart hide-cart">
+      <!-- Title -->
+      <h2 class="product-items-title">Product Items in Cart</h2>
 
-      <div class="container">
-        <div class="food-item">
-          <div class="pic">
-            <img src="./img/img-1.jpg" alt="food image" />
-          </div>
-          <p class="food-type">Plain</p>
-          <div class="price-cart">
-            <p class="item-price">Rs. <span class="food-price">40</span></p>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-        </div>
-        <div class="food-item">
-          <div class="pic">
-            <img src="./img/img-2.jpg" alt="food image" />
-          </div>
-          <p class="food-type">Paper Roast</p>
-          <div class="price-cart">
-            <p class="item-price">Rs. <span class="food-price">65</span></p>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-        </div>
-        <div class="food-item">
-          <div class="pic">
-            <img src="./img/img-3.jpg" alt="food image" />
-          </div>
-          <p class="food-type">Onion Roast</p>
-          <div class="price-cart">
-            <p class="item-price">Rs. <span class="food-price">80</span></p>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-        </div>
-        <div class="food-item">
-          <div class="pic">
-            <img src="./img/img-4.jpg" alt="food image" />
-          </div>
-          <p class="food-type">Egg Parotta</p>
-          <div class="price-cart">
-            <p class="item-price">Rs. <span class="food-price">55</span></p>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-        </div>
-        <div class="food-item">
-          <div class="pic">
-            <img src="./img/img-5.jpg" alt="food image" />
-          </div>
-          <p class="food-type">Plain Omelette</p>
-          <div class="price-cart">
-            <p class="item-price">Rs. <span class="food-price">25</span></p>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-        </div>
-        <div class="food-item">
-          <div class="pic">
-            <img src="./img/img-6.jpg" alt="food image" />
-          </div>
-          <p class="food-type">Kadai Fry</p>
-          <div class="price-cart">
-            <p class="item-price">Rs. <span class="food-price">150</span></p>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-        </div>
-        <div class="food-item">
-          <div class="pic">
-            <img src="./img/img-7.jpg" alt="food image" />
-          </div>
-          <p class="food-type">Egg Veechu</p>
-          <div class="price-cart">
-            <p class="item-price">Rs. <span class="food-price">65</span></p>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-        </div>
-        <div class="food-item">
-          <div class="pic">
-            <img src="./img/img-8.jpg" alt="food image" />
-          </div>
-          <p class="food-type">Egg Roast</p>
-          <div class="price-cart">
-            <p class="item-price">
-              Rs. <span class="food-price">Egg Roast</span>
-            </p>
-            <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-        </div>
+      <!-- Close Button -->
+      <div class="close-btn">
+        <i class="fa fa-window-close" aria-hidden="true" id="close-btn"></i>
       </div>
-    </section>
+
+      <div class="total-price">
+        <p>
+          $
+          <span class="totalPrice">0</span>
+        </p>
+      </div>
+
+      <!-- Product rows -->
+      <div class="product-row"></div>
+    </div>
   </body>
-  <script src="./js/script.js"></script>
+  <script src="./js/index.js"></script>
 </html>
