@@ -61,6 +61,19 @@ body {
 }
 
 /* Styling the add cart buton */
+button {
+  background: #000;
+  color: #e0d8d8;
+  padding: 0.75rem 1.2rem;
+  margin: 1rem 0;
+  transition: all 0.7s;
+  cursor: pointer;
+}
+
+button:hover {
+  border: none;
+  border-radius: 2px;
+}
 
 .add-btn {
   padding: 0.75rem 1rem;

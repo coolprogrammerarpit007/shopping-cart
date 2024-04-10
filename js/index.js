@@ -10,10 +10,14 @@ const totalPrice = document.querySelector(".totalPrice");
 const productCart = document.querySelector(".product-cart");
 const showCartBtn = document.querySelector(".show-cart");
 
+// ***********************************
 // State variable
 
 const cartItemPrices = [];
 let sum = 0;
+let sub = 0;
+
+// ***********************************
 
 // Adding functionalit to add items to the cart
 
@@ -31,6 +35,37 @@ for (let i = 0; i < addBtn.length; i++) {
     const p = document.createElement("p");
     p.innerText = prices[i].textContent;
 
+    // ****************************
+    const button = document.createElement("button");
+
+    // setting class attribute for the dynamically created button
+    button.setAttribute("id", "delete-btn" + i);
+    button.innerText = "Delete Item";
+
+    // Creating a new delete button
+
+    // *********************************
+
+    // function to remove items
+    const removeItem = function () {
+      const parent = button.parentElement;
+      parent.remove();
+
+      // Showing changed total cart price
+
+      sub = sum - Number(cartItemPrices[i].replace("$", "")); // updating cart after Item removal
+      sum = sub; // updating total cart sum
+
+      // Showing the updated cart total
+      document.querySelector(".totalPrice").textContent = sub;
+      console.log(sub);
+    };
+
+    // Event Listener to remove Item
+    button.addEventListener("click", removeItem);
+
+    // ********** REMOVE ITEMS ************
+
     // ************************
 
     // dynamically creating a new div element
@@ -39,9 +74,12 @@ for (let i = 0; i < addBtn.length; i++) {
 
     // ********************
 
-    // Appending h1 and p elements as child to the div element
+    // Appending h1 and p elements and delete button as child to the div element
     div.appendChild(h1);
     div.appendChild(p);
+    div.appendChild(button);
+
+    // *******************
 
     // ************************
 
@@ -55,16 +93,19 @@ for (let i = 0; i < addBtn.length; i++) {
 
     // Doing sum to the price
     sum = sum + Number(cartItemPrices[i].replace("$", ""));
-
+    console.log(sum);
     // Showing the total price
     totalPrice.textContent = sum;
   });
 }
 
+// ***********************************
+// ***********************************
+// ***********************************
+
 // Show cart function
 
 const openCart = () => {
-  console.log("Button working!");
   productCart.classList.remove("hide-cart");
 };
 
