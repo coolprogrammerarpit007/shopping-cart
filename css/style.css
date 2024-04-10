@@ -91,6 +91,25 @@ button:hover {
   border-radius: 2px;
 }
 
+/* ********************** */
+
+/* Styling The Clear Cart Button. */
+#clear-cart {
+  background-color: #ff5bae;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.7s;
+}
+
+#clear-cart:hover {
+  cursor: pointer;
+  background-color: #e72929;
+  font-size: 2rem;
+  padding: 1.2rem;
+}
+/* *********************** */
+
 /* Styling the product description */
 
 .item-description {
