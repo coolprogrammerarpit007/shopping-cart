@@ -17,7 +17,10 @@ const clearCart = document.getElementById("clear-cart");
 const cartItemPrices = [];
 let sum = 0;
 let sub = 0;
+let newSum = 0;
 const selectedItems = [];
+const selectedItemPrices = [];
+let totalSelectedItemPrices = 0;
 
 // ***********************************
 
@@ -35,6 +38,7 @@ for (let i = 0; i < addBtn.length; i++) {
 
     // dynamically creating a new p element and adding context to it.
     const p = document.createElement("p");
+    p.setAttribute("class", "selected-item-price");
     p.innerText = prices[i].textContent;
 
     // ***************************
@@ -59,13 +63,16 @@ for (let i = 0; i < addBtn.length; i++) {
       // If item is checked
       if (this.checked) {
         console.log(`Item ${i + 1} is selected!`);
+
+        // adding parent to array
         selectedItems.push(checkboxParentEl);
-        console.log(selectedItems);
+
+        // Pushing the selected Item price to the cart.
+        selectedItemPrices.push(Number(p.textContent.replace("$", "")));
       }
 
       // else, Item is unchecked.
       else {
-        console.log(`Item ${i + 1} is unchecked now.`);
         selectedItems.pop(checkboxParentEl);
         console.log(selectedItems);
       }
@@ -137,8 +144,8 @@ for (let i = 0; i < addBtn.length; i++) {
     // ****************************
 
     // Doing sum to the price
+    console.log(cartItemPrices);
     sum = sum + Number(cartItemPrices[i].replace("$", ""));
-    console.log(sum);
     // Showing the total price
     totalPrice.textContent = sum;
   });
@@ -170,34 +177,35 @@ showCartBtn.addEventListener("click", openCart);
 
 // Selectevely remooving Items from the cart.
 
-const clearShoppingCart = function () {
-  for (let i = 0; i < selectedItems.length; i++) {
-    productRows.removeChild(selectedItems[i]);
+//   ********* BUG****************
 
-    // finding index of Item in the array.
-    let index = selectedItems.indexOf(selectedItems[i]);
-    // removing specified item
-    selectedItems.splice(index, 1);
-    console.log(selectedItems);
+const clearShoppingCart = function () {
+  let length = selectedItems.length;
+
+  // removing the child element
+
+  for (let i = 0; i < length; i++) {
+    productRows.removeChild(selectedItems[i]);
   }
+
+  // removing elements from array
+  selectedItems.splice(0);
+
+  // updating the total price of cart.
+
+  for (let i = 0; i < length; i++) {
+    totalSelectedItemPrices += selectedItemPrices[i];
+  }
+  console.log("Total Price: ", totalSelectedItemPrices);
+  sum = sum - totalSelectedItemPrices;
+  totalSelectedItemPrices = 0;
+
+  newSum = sum;
+  // Showing the updated cart total
+  document.querySelector(".totalPrice").textContent = newSum;
 };
 
 clearCart.addEventListener("click", clearShoppingCart);
 
 // **********************************
 // **********************************
-// **********************************
-// **********************************
-
-// Code pseudocode / Adding a new feature to the cart and procedure:-
-
-// 1. When a new product is added to the  cart, now a new check box is also created.
-
-// 2. when the check box of a certain product is checked, the parent container of that product is added to the new array'
-
-// 3. similarly, when other products are added that product is also added to the array.
-
-// 4. A new clear cart button, which when triggered clear cart by removing the selected items from the cart.
-
-// *********************************
-// *********************************
